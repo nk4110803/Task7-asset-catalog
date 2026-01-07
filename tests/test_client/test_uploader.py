@@ -8,7 +8,7 @@ def test_uploader_file(monkeypatch, tmp_path):
         f.write("test content")
     uploader=Uploader()
     mock_post=Mock()
-    mock_post.stattus_code=200
+    mock_post.status_code = 200
     monkeypatch.setattr("requests.post", lambda *a, **kw: mock_post)
 
     class DummyState:
